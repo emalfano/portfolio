@@ -4,7 +4,7 @@
 <link 
   href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
   rel="stylesheet"  type='text/css'>
-
+<meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0;" />
 <style>
 body {
   margin: 0;
@@ -21,7 +21,7 @@ div {
 }
 div::after {
   content: "";
-  background: url("parrot.jpg");
+  background: url("parrot_small.jpg");
   opacity: 0.5;
   top: 0;
   left: 0;
@@ -30,6 +30,7 @@ div::after {
   position: absolute;
   z-index: -1;   
   background-size: cover;
+  background-position: right top;
 }
 h1 {
   position:absolute;
@@ -53,13 +54,32 @@ li {
 a {
   color: black;
 }
+@media only screen and (max-device-width:600px)and (orientation:portrait){
+    div:after {
+	background-position: right bottom;
+    }
+    h1 {
+    	font-size: 9vw;
+	top: 70%;
+    }
+}
+@media only screen and (max-device-width:600px)and (orientation:landscape){
+    div:after {
+	#background-position: right bottom;
+	background-size: 100vw;
+    }
+    h1 {
+    	font-size: 3vw;
+    }
+}
+
 </style>
 </head>
 <body>
 <div id="main">
 <ul style="list-style-type:none;display: inline;">
-  <li><a href="https://www.linkedin.com/in/elizabeth-alfano-b47b938?trk=nav_responsive_tab_profile"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a></li>
-  <li><a href="https://github.com/emalfano?tab=repositories"><i class="fa fa-github fa-2x" aria-hidden="true"></i>
+  <li><a target="_blank" href="https://www.linkedin.com/in/elizabeth-alfano-b47b938?trk=nav_responsive_tab_profile"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a></li>
+  <li><a target="_blank" href="https://github.com/emalfano?tab=repositories"><i class="fa fa-github fa-2x" aria-hidden="true"></i>
  </a></li>
 </ul>
 </div>
