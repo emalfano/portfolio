@@ -1,7 +1,6 @@
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
 <link href="https://fonts.googleapis.com/css?family=Kalam" rel="stylesheet">
-<link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"  type='text/css'>
 <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"  type='text/css'>
 <meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0;" />
 <style>
@@ -10,38 +9,63 @@ body {
   font-size: 0;
   font-family: 'Kalam', cursive;
   color: #3D3C3A;
+  color: #4A3C33;
+  color: #fff;
+  #background-color: #2D2D2D;
 }
-div {
-  height: 100vh;
+#main {
+  height: 85vh;
   width: 100vw;
   display: block;
   position: relative;
   font-size: medium;
+  margin: 0;
+
 }
 div::after {
   content: "";
-  background: url("parrot_small.jpg");
-  opacity: 0.5;
+  #background: url("parrot_small.jpg");
+  background: url("background_small.jpg");
+
+  #opacity: 0.9;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
-  position: absolute;
+  position: fixed;
   z-index: -1;   
   background-size: cover;
-  background-position: right top;
+  background-position: center center;
+  #background-repeat: no-repeat;
+}
+.layer {
+    background-color: rgba(19, 28, 19, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
 }
 h1 {
   position:absolute;
-  top:80%;
-  left:20%;
-  font-size: 3vw;
-  z-index: 1;
+
+  font-size: 2.5vw;
+  #z-index: 1;
+  text-shadow: 0px 0px #000;
+  margin: 0 auto;
 }
+#name {
+    position: relative;
+    #margin: 0 auto;
+    top: 20%;
+    #left: 40%;
+    text-align: center;
+ }
 header {
   font-size: medium;
   height: 15%;
- 
+  background-color: black;
 }
 ul {
   float: right;
@@ -49,41 +73,55 @@ ul {
 li {
   float: left;  
   padding: 1vw 2vw 2vw 0vw;
+
 }
 a {
-  color: black;
+  color: white;
+    text-decoration: none;
+}
+.menu  {
+    position: relative;
+    margin: 0 10px 0 10px;
+    #left: -10%;
+    #top: 0;
 }
 @media only screen and (max-device-width:600px)and (orientation:portrait){
     div:after {
 	background-position: right bottom;
     }
     h1 {
-    	font-size: 9vw;
-	top: 70%;
+    	font-size: 7vw;
+	    top: 70%;
     }
 }
 @media only screen and (max-device-width:600px)and (orientation:landscape){
     div:after {
-	#background-position: right bottom;
+	background-position: right bottom;
 	background-size: 100vw;
     }
     h1 {
-    	font-size: 3vw;
+    	font-size: 4vw;
     }
 }
 
 </style>
 </head>
 <body>
-<div id="main">
-<ul style="list-style-type:none;display: inline;">
-  <li><a target="_blank" href="https://www.linkedin.com/in/elizabeth-alfano-b47b938?trk=nav_responsive_tab_profile"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a></li>
-  <li><a target="_blank" href="https://github.com/emalfano?tab=repositories"><i class="fa fa-github fa-2x" aria-hidden="true"></i>
- </a></li>
-</ul>
-</div>
-<h1>
-  Hi, my name is Elizabeth. I am a web developer.
-</h1>
+
+    <header>
+        <ul style="list-style-type:none;display: inline;">
+          <li class="menu"><a target="" href="#">Portfolio</a></li>
+            <li class="menu"><a target="" href="#">About</a></li>
+            <li class="menu"><a target="" href="#">Contact</a></li>
+            <li><a target="_blank" href="https://www.linkedin.com/in/elizabeth-alfano-b47b938?trk=nav_responsive_tab_profile"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a></li>
+          <li><a target="_blank" href="https://github.com/emalfano?tab=repositories"><i class="fa fa-github fa-2x" aria-hidden="true"></i>
+         </a></li>
+        </ul>
+    </header>
+    <div id="main">
+        <h1 class="layer">
+          <div id="name">Hi, my name is<br><span>Elizabeth Alfano</span><br>I am a web developer based<br>in Orange County, California</div>
+        </h1>
+    </div>
 </body>
 </html>
